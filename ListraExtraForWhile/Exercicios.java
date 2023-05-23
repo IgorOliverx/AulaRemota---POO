@@ -110,4 +110,60 @@ public class Exercicios {
         System.out.println("Estado Civil: " + estadoCivil);
         
     }
-}
+
+    public void exercicio3 () {
+
+        int populacaoA = 80000;
+        double taxaCrescimentoA = 0.03;
+
+        int populacaoB = 200000;
+        double taxaCrescimentoB = 0.015;
+
+        int anos = 0;
+        for (;;) {
+            populacaoA += populacaoA * taxaCrescimentoA;
+            populacaoB += populacaoB * taxaCrescimentoB;
+            anos++;
+
+            if (populacaoA >= populacaoB) {
+                break;
+            }
+        }
+
+        System.out.println("Número de anos necessários: " + anos);
+        }
+
+        public void exercicio4(){
+
+            System.out.println("PAÍS A");
+            System.out.println("Informe a população:");
+            int populacaoA = sc.nextInt();
+            System.out.println("Informe a taxa de crescimento anual");
+            double taxaCrescimentoA = sc.nextDouble();
+
+            System.out.println("PAÍS B");
+            System.out.println("Informe a população:");
+            int populacaoB = sc.nextInt();
+            System.out.println("Informe a taxa de crescimento anual");
+            double taxaCrescimentoB = sc.nextDouble();
+
+        int anos = 0;
+        for (;;) {
+            populacaoA += populacaoA * taxaCrescimentoA;
+            populacaoB += populacaoB * taxaCrescimentoB;
+            anos++;
+
+            if (populacaoA >= populacaoB) {
+                break;
+            }
+        }
+
+        System.out.println("Número de anos necessários: " + anos);
+        }
+
+        public void exercicio5() {
+            
+        }
+
+    }
+

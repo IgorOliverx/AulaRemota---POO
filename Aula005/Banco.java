@@ -4,7 +4,7 @@ public class Banco {
 
     public int numConta;
     protected String tipoConta;
-    private String donoConta;
+    public String donoConta;
     private double saldoConta;
     private boolean statusConta;
 
@@ -31,11 +31,11 @@ public class Banco {
         tipoConta = t;
     }
 
-    private String getDonoConta() {
+    public String getDonoConta() {
         return this.donoConta;
     }
 
-    private void setDonoConta(String d) {
+    public void setDonoConta(String d) {
         donoConta = d;
     }
 
@@ -56,6 +56,16 @@ public class Banco {
     }
 
     // Métodos personalizados
+
+    public void estadoAtual() {
+        System.out.println("=======================================");
+        System.out.println("Conta: "+ this.getNumConta());
+        System.out.println("Proprietário: "+ this.getDonoConta());
+        System.out.println("Tipo da conta: "+ this.getTipoConta());
+        System.out.println("Saldo: "+ this.getSaldoConta());
+        System.out.println("Status: "+ this.getStatusConta());
+        System.out.println("=======================================");
+    }
 
     public void abrirConta(String t) {
 

@@ -4,14 +4,30 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-     Scanner sc = new Scanner(System.in);
+        Banco p1 = new Banco();
+            p1.setNumConta(27112021);
+            p1.setDonoConta("Deyverson");
+            p1.abrirConta("cc");
+            p1.depositar(100);
+            p1.estadoAtual();
 
-     
 
-        System.out.println("Olá, seja Bem-Vindo ao Spacebank - o Seu banco digital");
+            Banco p2 = new Banco();
 
-        System.out.println("Qual tipo de conta deseja abrir? Digite c para corrente e p para poupança");
+            p2.setNumConta(30012021);
+            p2.setDonoConta("Breno Lopes");
+            p2.abrirConta("cp");
+            p2.depositar(500);
+            p2.sacar(100);
+            p2.estadoAtual();
+
 
         
+            
+            
+
+
+
+
     }
 }

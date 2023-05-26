@@ -9,8 +9,7 @@ public class App {
         //a.setPneu(35f);
         a.status();
 
-        Carro b = new Carro ("458 itália", "Ferrari", "32f");
-        a.status();
+    
 
 
     }

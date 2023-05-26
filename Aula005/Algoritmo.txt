@@ -1,0 +1,31 @@
+Desenvolver um software para um banco financeiro
+
+Criação de uma classe conta corrente;
+
+ContaBanco
+
+atributos:
+
+
+public numConta  // getter e setter p todos
+protected tipoConta - só aceita dois tipos de conta - cc e cp
+dprivate onoConta
+private saldoConta
+private statusConta
+
+
+métodos():
+
+
+métodos constutor
+
+todos public
+abrirConta(); - mudar o status para verdadeiro
+fecharConta(); - mudar status para falso
+depositar();
+sacar();
+pagarMensal();
+
+
+se for cc - ganha 50 reais
+se for cp - ganha 150 reais

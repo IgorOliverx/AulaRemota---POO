@@ -82,7 +82,7 @@ public class Banco {
         }
     }
 
-    }
+    
 
     public void depositar(double v) {
 
@@ -113,23 +113,22 @@ public class Banco {
 
     public void pagarMensal(){
 
-       int v;
-       if(this.getTipoConta() == "cc"){
-        v = 12;
-       }else if (this.getTipoConta() == "cp"){
-        v = 20;
-       }
+double v = 0.0;
+if(this.getTipoConta() == "cc"){
+        v = 12;}else if (this.getTipoConta() == "cp"){
+        v = 20;}
 
 
 if(this.getStatusConta()){
     if(this.getSaldoConta() >= v) {
         this.setSaldoConta(this.getSaldoConta() - v);
         System.out.println("Mensalidade paga com sucesso!");
-    }else {
-        System.out.println("Saldo insuficiente");
+}else {System.out.println("Saldo insuficiente");}
+}else {System.out.println("Impossível pagar");}
     }
-} else{ 
-    System.out.println("Impossível pagar");
-    }
-    
-    }
+}
+
+
+
+
+

@@ -50,12 +50,16 @@ public class ControleRemoto implements Controlador {
 
     @Override
     public void abrirMenu() {
+        if(this.getLigado() == true) {
+        System.out.println("========== MENU ==========");
         System.out.println("Está ligado? "+ this.getLigado());
         System.out.println("Está tocando? "+ this.getTocando());    
         System.out.print("Volume "+ this.getVolume());
         for (int i = 0; i < this.getVolume(); i+=10) {
             System.out.print("|");
-            
+        }
+        } else {
+            System.out.println("Não é possível abrir o menu com o controle desligado!");
         }
     }
 
@@ -76,31 +80,49 @@ public class ControleRemoto implements Controlador {
 
     @Override
     public void menosVolume() {
-       
+        if(this.getLigado() == true) {
+            this.setVolume(this.getVolume() - 1);
+            System.out.println("O Seu volume está em "+ this.getVolume());
+        } else {
+            System.out.println("Impossível abaixar volume");
+        } 
     
     }
 
     @Override
     public void ligarMudo() {
-       
-    
+        if(this.getLigado() == true && this.getVolume() > 0 ) {
+            this.setVolume(0);
+        }
     }
 
     @Override
     public void desligarMudo() {
-       
-    
+        if (this.getLigado() == true && this.getVolume() == 0){
+            this.setVolume(50);
+        }    
     }
 
     @Override
     public void play() {
-       
+        if(this.getLigado() == true && !(this.getTocando())) {
+            this.setTocando(true);
+            System.out.println("Você deu Play!");
+        } else {
+            System.out.println("Não consegui reproduzir");
+        }
     
     }
 
     @Override
     public void pause() {
-       
+        if(this.getLigado() == true && this.getTocando() == true) {
+            this.setTocando(false);
+            System.out.println("Você deu pause! ");
+
+        } else {
+            System.out.println("Não Consegui pausar!");
+        }
     
     }
 
